@@ -1,9 +1,19 @@
+
 # Consume Operations
 
 
 Consume Operations is a simple message receiving system.  
-The app consumes messages which are sended from [Message Send Operations](https://github.com/mkalyoncu/MessageSendOperations) project and write logs to stdout.  
-In the project, there is a Worker.java class that does the receiving and also it is implemented from Runnable interface. I created two workers and when the app starts, the two workers are start their thread too. So the app may consume **two packages at one time**.
+The app consumes messages which are sended from [Message Send Operations](https://github.com/mkalyoncu/MessageSendOperations) project and writes logs to stdout. 
+
+### Contents  
+
+EndPoint.java class has written to make channel and connection of message queue easily reachable.  
+
+Properties file externalizes the configuration and to store the key-value pairs of message queue. It can be accessable by getProperty() method from PropertiesReader.java class.
+
+In the project, there is a Worker.java class which receives and writes messages to stdout. Also it is implemented from Runnable interface to work with threads.
+
+There are two workers created in the main class. When the app starts, the workers start their thread too. So the app may consume **two packages at one time**.
 
 ### Requirements  
 
