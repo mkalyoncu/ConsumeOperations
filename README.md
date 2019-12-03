@@ -3,7 +3,7 @@
 
 Consume Operations is a simple message receiving system.  
 The app consumes messages which are sended from [Message Send Operations](https://github.com/mkalyoncu/MessageSendOperations) project.  
-In the project, there is a Worker.java class that does the receiving and also implemented from Runnable interface. I created two workers and when the app starts, the two workers are start their thread too. So the app may consume **two packages at one time**.
+In the project, there is a Worker.java class that does the receiving and also it is implemented from Runnable interface. I created two workers and when the app starts, the two workers are start their thread too. So the app may consume **two packages at one time**.
 
 ### Requirements  
 
