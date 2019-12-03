@@ -13,7 +13,7 @@ Properties file externalizes the configuration and store the key-value pairs of 
 
 In the project, there is a Worker.java class which receives and writes messages to stdout. Also it is implemented from Runnable interface to work with threads.
 
-There are two workers created in the main class. When the app starts, the workers start their thread too. So the app may consume **two packages at one time**.
+There are two workers created in the main class. When the app starts, two threads which contains these workers start too. So the app may consume **two packages at one time**.
 
 ### Requirements  
 
