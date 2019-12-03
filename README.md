@@ -9,7 +9,7 @@ The app consumes messages which are sended from [Message Send Operations](https:
 
 EndPoint.java class has written to make channel and connection of message queue easily reachable.  
 
-Properties file externalizes the configuration and to store the key-value pairs of message queue. It can be accessable by getProperty() method from PropertiesReader.java class.
+Properties file externalizes the configuration and to store the key-value pairs of message queue such as IP address, username, password, etc. It can be accessable by getProperty() method from PropertiesReader.java class.
 
 In the project, there is a Worker.java class which receives and writes messages to stdout. Also it is implemented from Runnable interface to work with threads.
 
