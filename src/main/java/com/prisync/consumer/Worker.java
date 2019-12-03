@@ -4,6 +4,7 @@ import com.prisync.environment.EndPoint;
 import com.rabbitmq.client.DeliverCallback;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeoutException;
 
 public class Worker extends EndPoint implements Runnable {
@@ -14,8 +15,9 @@ public class Worker extends EndPoint implements Runnable {
 
     @Override
     public void run() {
+        System.out.println(" [x] To exit press CTRL+C");
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-            String message = new String(delivery.getBody(), "UTF-8");
+            String message = new String(delivery.getBody(), StandardCharsets.UTF_8);
             System.out.println(" [*] Message has been received '" + message + "'");
             try {
                 Thread.sleep(100);

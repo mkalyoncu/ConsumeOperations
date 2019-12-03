@@ -1,9 +1,7 @@
 package com.prisync.environment;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
+
 import java.util.Properties;
 
 public class PropertiesReader {
@@ -11,20 +9,10 @@ public class PropertiesReader {
     private Properties properties = new Properties();
 
     public PropertiesReader() {
-        InputStream input = null;
-        try {
-            input = new FileInputStream("./src/main/resources/rabbitmq.properties");
-            properties.load(input);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        try (InputStream inputStream = getClass().getResourceAsStream("/rabbitmq.properties")) {
+            properties.load(inputStream);
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                input.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
     }
 
