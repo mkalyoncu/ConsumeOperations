@@ -29,9 +29,9 @@ git clone https://github.com/mkalyoncu/ConsumeOperations.git
 ``
 2. Import it in Intellij IDEA.  
 3. Find 'rabbitmq.properties' file under the resources directory and modify it with your information
-4. Run the app or make an executable jar from the project with command below  
+4. Make an executable jar from the project with command below  
 ``
 mvn install
 ``    
 5. ``` cd target ```  
-6. ``` java -jar MessageSendOperations-jar-with-dependencies.jar ```
+6. ``` java -jar ConsumeOperations-jar-with-dependencies.jar ```
