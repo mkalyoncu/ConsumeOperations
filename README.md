@@ -3,7 +3,7 @@
 
 
 Consume Operations is a simple message receiving system.  
-The app consumes messages which are sended from [Message Send Operations](https://github.com/mkalyoncu/MessageSendOperations) project and writes logs to stdout. 
+The app consumes messages which are sent from [Message Send Operations](https://github.com/mkalyoncu/MessageSendOperations) project and writes logs to stdout. 
 
 ### Contents  
 
