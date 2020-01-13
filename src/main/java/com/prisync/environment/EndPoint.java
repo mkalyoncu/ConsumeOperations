@@ -29,6 +29,5 @@ public abstract class EndPoint {
         channel = connection.createChannel();
         channel.basicQos(1);
         channel.queueDeclare(rmqQueueName, true, false, false, null);
-
     }
 }
